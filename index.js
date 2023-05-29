@@ -11,7 +11,7 @@ search.addEventListener("click", () => {
    if (city === "") return;
 
    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
    )
       .then((response) => response.json())
       .then((json) => {
@@ -23,6 +23,7 @@ search.addEventListener("click", () => {
             error404.classList.add("fadeIn");
             return;
          }
+
          error404.style.display = "none";
          error404.classList.remove("fadeIn");
 
@@ -33,8 +34,10 @@ search.addEventListener("click", () => {
          const description = document.querySelector(
             ".weather-box .description"
          );
-         const humidity = document.querySelector(".weather-box .humidity span");
-         const wind = document.querySelector(".weather-box .wind span");
+         const humidity = document.querySelector(
+            ".weather-details .humidity span"
+         );
+         const wind = document.querySelector(".weather-details .wind span");
 
          switch (json.weather[0].main) {
             case "Clear":
@@ -50,24 +53,26 @@ search.addEventListener("click", () => {
                break;
 
             case "Clouds":
-               image.src = "images/clouds.png";
+               image.src = "images/cloud.png";
                break;
 
             case "Haze":
-               image.src = "images/haze.png";
+               image.src = "images/mist.png";
                break;
 
             default:
                image.src = "";
          }
 
-         temperature.innerHTML = `${parseInt(json.main.temp)}<span> °C</span>`;
+         temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
          description.innerHTML = `${json.weather[0].description}`;
          humidity.innerHTML = `${json.main.humidity}%`;
          wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
-
-
-
+         weatherBox.style.display = "";
+         weatherDetails.style.display = "";
+         weatherBox.classList.add("fadeIn");
+         weatherDetails.classList.add("fadeIn");
+         container.style.height = "590px";
       });
 });
