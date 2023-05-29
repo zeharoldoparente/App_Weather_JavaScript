@@ -12,7 +12,6 @@ body {
    justify-content: center;
    background: #06283d;
 }
-
 .container {
    position: relative;
    width: 400px;
@@ -24,7 +23,6 @@ body {
    font-family: "Roboto", sans-serif;
    transition: 0.6s ease-out;
 }
-
 .search-box {
    width: 100%;
    height: min-content;
@@ -32,7 +30,6 @@ body {
    align-items: center;
    justify-content: center;
 }
-
 .search-box input {
    color: #06283d;
    width: 80%;
@@ -41,14 +38,12 @@ body {
    text-transform: uppercase;
    padding-left: 32px;
 }
-
 .search-box input::placeholder {
    font-size: 20px;
    font-weight: 500;
    color: #06283d;
    text-transform: capitalize;
 }
-
 .search-box button {
    cursor: pointer;
    width: 50px;
@@ -59,12 +54,10 @@ body {
    font-size: 22px;
    transition: 0.4s ease;
 }
-
 .search-box button:hover {
    color: #fff;
    background: #06283d;
 }
-
 .search-box i {
    color: #06283d;
    font-size: 28px;
@@ -76,7 +69,6 @@ body {
    width: 60%;
    margin-top: 30px;
 }
-
 .weather-box .temperature {
    position: relative;
    color: #06283d;
@@ -96,14 +88,12 @@ body {
    font-weight: 500;
    text-transform: capitalize;
 }
-
 .weather-details {
    width: 100%;
    display: flex;
    justify-content: space-between;
    margin-top: 30px;
 }
-
 .weather-details .humidity,
 .weather-details .wind {
    display: flex;
@@ -111,12 +101,10 @@ body {
    width: 50%;
    height: 100px;
 }
-
 .weather-details .humidity {
    padding-left: 20px;
    justify-content: flex-start;
 }
-
 .weather-details .wind {
    padding-right: 20px;
    justify-content: flex-end;
@@ -127,19 +115,16 @@ body {
    margin-right: 10px;
    margin-top: 6px;
 }
-
 .weather-details span {
    color: #06283d;
    font-size: 22px;
    font-weight: 500;
 }
-
 .weather-details p {
    color: #06283d;
    font-size: 14px;
    font-weight: 500;
 }
-
 .not-found {
    width: 100%;
    text-align: center;
@@ -148,11 +133,9 @@ body {
    opacity: 0;
    display: none;
 }
-
 .not-found img {
    width: 70%;
 }
-
 .not-found p {
    color: #06283d;
    font-size: 22px;
@@ -164,7 +147,6 @@ body {
    scale: 0;
    opacity: 0;
 }
-
 .fadeIn {
    animation: 0.5s fadeIn forwards;
    animation-delay: 0.5s;
