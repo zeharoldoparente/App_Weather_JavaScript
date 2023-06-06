@@ -151,6 +151,18 @@ body {
    animation: 0.5s fadeIn forwards;
    animation-delay: 0.5s;
 }
+
+#reset-button{
+   font-weight: bold;
+   color: #06283d;
+   text-transform: uppercase;
+   border-radius: 8%;
+   padding: 15px;
+   margin-top: 730px;
+   position: absolute;
+}
+
+
 @keyframes fadeIn {
    to {
       scale: 1;
